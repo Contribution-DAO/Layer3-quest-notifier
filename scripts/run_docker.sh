@@ -1,0 +1,1 @@
+docker run -it --name l3-quest-notifier --rm layer3/quest_notifier

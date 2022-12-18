@@ -1,0 +1,7 @@
+# environment file
+*.venv
+*.env
+
+# cache
+**/__pycache__
+**/*.ipynb*
