@@ -46,8 +46,12 @@ class Layer3Task(object):
         self.xp = xp
         self.namespace = namespace
 
+        self.url = f"https://beta.layer3.xyz/quests/{namespace}" if namespace is not None else None
+
     def to_string(self, markdown: bool = True) -> str:
         template = f"**{self.title}**" if markdown else self.title
+        if self.url is not None:
+            template += f"\nURL: {self.url}"
         template += f"\n\nCreated at:\t{self.created_at}"
         template += f"\nExpiration Date:\t{self.expiration_date}"
 
